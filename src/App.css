@@ -1,0 +1,181 @@
+.App {
+  text-align: center;
+}
+
+.btn {
+  width: 4rem;
+  height: 2rem;
+  background: white;
+  background:  linear-gradient( to right top, rgba(255,255,255 ,0.7) , rgba(255,255,255,0.2));
+  border: black 1px solid;
+  color: black;
+  border-radius: 10px;
+  margin: 1%;
+}
+
+input:focus , button:focus {
+outline: none;
+}
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background:  linear-gradient( to right top,#65dfc9 , #6cdbeb);
+  box-sizing: border-box;
+}
+
+.userGrid{
+  position: absolute;
+  background: white;
+  background:  linear-gradient( to right top, rgba(255,255,255 ,0.7) , rgba(255,255,255,0.2));
+  backdrop-filter: 2rem;
+  border-radius: 10px;
+  right: 5%;
+  top: 5%;
+  width: 60vw;
+  height: 80vh;
+  display: grid;
+  grid-gap : 20px;
+  grid-template-columns : repeat(auto-fill, minmax(200px, 1fr));
+  overflow:scroll ;
+  overflow-x: hidden;
+  padding: 15px;
+  border: black 1px solid;
+}
+
+.newUser{
+  position: relative;
+  left: 10%;
+  top: 40%;
+  width: 20rem;
+  height: 20rem;
+  background-color: transparent;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+
+.newUser .btn {
+ float: right;
+ margin: 10px;
+}
+
+.userCard {
+  border: 1px #888888 solid;
+  background:  linear-gradient( to right top,#65dfc9 , #6cdbeb);
+  box-shadow: 5px 5px 5px #888888; 
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.userCard .btn {
+  float: left;
+  width: 48%;
+}
+
+
+.edit {
+  display: flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding: 3%;
+  width: 30rem;
+  height:20rem;
+  background:  linear-gradient( to right top,#65dfc9 , #6cdbeb);
+  backdrop-filter: 2rem;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  border: black 3px solid;
+  box-shadow: 5px 5px 5px #888888; 
+}
+.edit .btn{
+margin-top: 5px;
+}
+
+section div:first-child button {
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+}
+
+.userGrid .btn {
+  background-color: rgb(139, 5, 5);
+  color: white;
+}
+
+.userGrid div:last-child button {
+  background-color: rgb(12, 2, 110);
+  color: white;
+}
+
+
+
+input {
+  width: 90%;
+  height: 50%;
+  border: 1px #888888 solid;
+  border-radius: 10px;
+  background: white;
+  background:  linear-gradient( to right top, rgba(255,255,255 ,0.7) , rgba(255,255,255,0.2));
+  box-shadow: 5px 5px 5px #888888;
+}
+p{
+  position: absolute;
+  bottom: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(4, 7, 54); 
+  border-radius: 10px;
+}
+
+.spinner {
+  width: 100%;
+  height: 100%;
+  background: white;
+  background:  linear-gradient( to right top, rgba(255,255,255 ,0.7) , rgba(255,255,255,0.2));
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes spin {
+  0% {border-top: 10px solid black;}
+  25% {border-right: 10px solid black;}
+  50% {border-bottom: 10px solid black;}
+  75% {border-left: 10px solid black;}
+}
+
+.loading  {
+
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
